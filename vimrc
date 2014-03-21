@@ -1,7 +1,7 @@
 set nocompatible
 
-"execute pathogen#infect()
 runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
 filetype off
 syntax on
 
