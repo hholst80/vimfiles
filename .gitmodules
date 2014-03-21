@@ -4,3 +4,9 @@
 [submodule "bundle/vim-colorschemes"]
 	path = bundle/vim-colorschemes
 	url = git://github.com/flazz/vim-colorschemes
+[submodule "bundle/vim-pandoc"]
+	path = bundle/vim-pandoc
+	url = git://github.com/vim-pandoc/vim-pandoc.git
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
