@@ -23,3 +23,9 @@ endif
 if has("win32")
 	set fileformat=dos
 endif
+
+au BufNewFile,BufRead *.build set filetype=xml
+
+" vim-fugitive
+set statusline=%F%m%r%h%w
+set statusline+=%{fugitive#statusline()}
