@@ -12,12 +12,14 @@ set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set list
 
 if has("gui_running")
-	"colorscheme darkblue
-	colorscheme delek
+	"colorscheme github
+	colorscheme solarized
+	let g:solarized_visibility="low"
+	set background=light
 	"set guifont=Consolas:h10:b:cANSI 
 	set guifont=Consolas:h10:cANSI 
 endif
 
-if (has("win32"))
+if has("win32")
 	set fileformat=dos
 endif
