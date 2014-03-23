@@ -12,9 +12,6 @@ syntax on
 
 " Default settings
 
-set tabstop=4
-set shiftwidth=4
-set noexpandtab
 if has("win32")
 	set fileformat=dos
 endif
