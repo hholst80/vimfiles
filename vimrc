@@ -1,15 +1,25 @@
-set nocompatible
+" @file vimrc
+" @author Henrik Holst <holst@matmech.com>
+" Global settings
 
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
-filetype off
+set nocompatible                        " Disable VI compability.
+set ruler                               " Show cursor position all the time.
+set incsearch                           " Incremental search.
+set list                                " Show formatting characters.
+set listchars=tab:>-,trail:~,extends:>,precedes:<
+set statusline=%F%m%r%h%w
 syntax on
+
+" Default settings
 
 set tabstop=4
 set shiftwidth=4
 set noexpandtab
-set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
-set list
+if has("win32")
+	set fileformat=dos
+endif
+
+" GUI settings
 
 if has("gui_running")
 	"colorscheme github
@@ -23,12 +33,16 @@ if has("gui_running")
 	endif
 endif
 
-if has("win32")
-	set fileformat=dos
-endif
+" AutoCommand settings
 
 au BufNewFile,BufRead *.build set filetype=xml
 
+" Load pathogen and insert all bundles.
+
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
+" Bundle specific options.
+
 " vim-fugitive
-set statusline=%F%m%r%h%w
 set statusline+=%{fugitive#statusline()}
