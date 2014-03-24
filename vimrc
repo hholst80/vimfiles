@@ -9,6 +9,7 @@ set list                                " Show formatting characters.
 set listchars=tab:>-,trail:~,extends:>,precedes:<
 set statusline=%F%m%r%h%w
 syntax on
+filetype plugin on
 
 " Default settings
 
