@@ -13,6 +13,12 @@ filetype plugin on
 
 " Load pathogen and insert all bundles.
 
+let g:pathogen_disabled = []
+
+if v:version < '704'
+	call add(g:pathogen_disabled, 'vim-youcompleteme')
+endif
+
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
