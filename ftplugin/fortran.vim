@@ -3,7 +3,7 @@ setlocal tabstop=6
 setlocal shiftwidth=2
 setlocal textwidth=72
 setlocal smartindent
-inoremap <TAB> <C-R>=fortran#tabstop()<CR>
+inoremap <buffer> <TAB> <C-R>=fortran#tabstop()<CR>
 
 function fortran#tabstop()
 	let l = line('.')
