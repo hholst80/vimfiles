@@ -8,6 +8,7 @@ set incsearch                           " Incremental search.
 set list                                " Show formatting characters.
 set listchars=tab:>-,trail:~,extends:>,precedes:<
 set statusline=%F%m%r%h%w
+set backspace=indent,eol,start
 syntax on
 filetype plugin on
 
