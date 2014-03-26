@@ -36,7 +36,7 @@ if has("gui_running")
 	let g:solarized_visibility="low"
 	set background=light
 	if has("win32")
-		set guifont=Consolas:h10:cANSI 
+		set guifont=Consolas:h11:cANSI
 	else
 		set guifont=Inconsolata\ Medium\ 12
 	endif
