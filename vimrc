@@ -15,7 +15,7 @@ filetype plugin on
 
 let g:pathogen_disabled = []
 
-if v:version < '704' || !has('python')
+if v:version < '703' || !has('patch584') || !has('python')
 	call add(g:pathogen_disabled, 'vim-youcompleteme')
 endif
 
