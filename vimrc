@@ -9,6 +9,7 @@ set list                                " Show formatting characters.
 set listchars=tab:>-,trail:~,extends:>,precedes:<
 set statusline=%F%m%r%h%w
 set backspace=indent,eol,start
+set autoread                            " Automatically reload external changes.
 syntax on
 filetype plugin on
 
