@@ -46,3 +46,7 @@ endif
 " AutoCommand settings
 
 au BufNewFile,BufRead *.build set filetype=xml
+
+" Macros
+
+let @b = "yiwcw<]pa></]pa>bb"     " XML brackets
