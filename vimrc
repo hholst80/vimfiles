@@ -10,6 +10,10 @@ set listchars=tab:>-,trail:~,extends:>,precedes:<
 set statusline=%F%m%r%h%w
 set backspace=indent,eol,start
 set autoread                            " Automatically reload external changes.
+set ttyfast                             " Speed up Vim session. [Alex Pounds]
+set lazyredraw                          " Speed up redrawing.
+set scrolloff=8
+set scrolljump=-50
 syntax on
 filetype plugin on
 
@@ -46,3 +50,7 @@ endif
 " AutoCommand settings
 
 au BufNewFile,BufRead *.build set filetype=xml
+
+" Macros
+
+let @b = "yiwcw<]pa></]pa>bb"     " XML brackets
