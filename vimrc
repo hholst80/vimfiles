@@ -37,7 +37,6 @@ endif
 " GUI settings
 
 if has("gui_running")
-	colorscheme solarized
 	let g:solarized_visibility="low"
 	set background=light
 	if has("win32")
@@ -50,6 +49,7 @@ endif
 " AutoCommand settings
 
 au BufNewFile,BufRead *.build set filetype=xml
+au BufNewFile,BufRead *.c set cindent cinoptions=(0,u0,U0
 
 " Macros
 
