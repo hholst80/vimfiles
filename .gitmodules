@@ -19,3 +19,6 @@
 [submodule "bundle/vim-neocomplete"]
 	path = bundle/vim-neocomplete
 	url = https://github.com/Shougo/neocomplete.vim
+[submodule "bundle/vim-seoul256"]
+	path = bundle/vim-seoul256
+	url = https://github.com/junegunn/seoul256.vim
