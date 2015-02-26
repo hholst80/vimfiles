@@ -5,8 +5,8 @@
 
 set nocompatible                        " Disable VI compability.
 set noswapfile                          " Disable swap files.
-set visualbell
-set noerrorbells                        " Disable annoying beeps.
+set novisualbell                        " Disable visual bell.
+set noerrorbells                        " Disable annoying audio beeps.
 set ruler                               " Show cursor position all the time.
 set incsearch                           " Incremental search.
 set list                                " Show formatting characters.
