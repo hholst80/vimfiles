@@ -1,21 +1,27 @@
 " @file vimrc
 " @author Henrik Holst <holst@matmech.com>
+
 " Global settings
 
 set nocompatible                        " Disable VI compability.
+set noswapfile                          " Disable swap files.
+set visualbell
+set noerrorbells                        " Disable annoying beeps.
 set ruler                               " Show cursor position all the time.
 set incsearch                           " Incremental search.
 set list                                " Show formatting characters.
-set listchars=tab:>-,trail:~,extends:>,precedes:<
+set listchars=tab:>\ ,trail:~,extends:>,precedes:<
 set statusline=%F%m%r%h%w
 set backspace=indent,eol,start
 set autoread                            " Automatically reload external changes.
 set ttyfast                             " Speed up Vim session. [Alex Pounds]
+set title                               " Change terminal title.
 set lazyredraw                          " Speed up redrawing.
 set scrolloff=8
-set scrolljump=-50
+set hlsearch
+set pastetoggle=<INS>
 syntax on
-filetype plugin on
+filetype plugin indent on
 
 " Load pathogen and insert all bundles.
 
@@ -27,6 +33,7 @@ endif
 
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
+call pathogen#helptags()
 
 " Default settings and package configuration.
 
@@ -39,12 +46,19 @@ endif
 if has("gui_running")
 	let g:solarized_visibility="low"
 	set background=light
+	colorscheme xoria256
 	if has("win32")
-		set guifont=Consolas:h11:cANSI
+		set guifont=Consolas:h10:cANSI
 	else
 		set guifont=Inconsolata\ Medium\ 12
 	endif
+else
+	set background=dark
 endif
+
+" Key mappings
+
+nmap <silent> ,/ :nohlsearch<CR>
 
 " AutoCommand settings
 
