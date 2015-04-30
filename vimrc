@@ -8,9 +8,9 @@ set noswapfile                          " Disable swap files.
 set novisualbell                        " Disable visual bell.
 set noerrorbells                        " Disable annoying audio beeps.
 set ruler                               " Show cursor position all the time.
-set incsearch                           " Incremental search.
+set noincsearch                         " No incremental search.
 set list                                " Show formatting characters.
-set listchars=tab:>\ ,trail:~,extends:>,precedes:<
+set listchars=tab:>-,trail:~,extends:>,precedes:<
 set statusline=%F%m%r%h%w
 set backspace=indent,eol,start
 set autoread                            " Automatically reload external changes.
@@ -46,7 +46,9 @@ endif
 if has("gui_running")
 	let g:solarized_visibility="low"
 	set background=light
-	colorscheme xoria256
+	"colorscheme solarized
+	"colorscheme xoria256
+	colorscheme seoul256-light
 	if has("win32")
 		set guifont=Consolas:h10:cANSI
 	else
