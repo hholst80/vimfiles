@@ -10,7 +10,7 @@ set noerrorbells                        " Disable annoying audio beeps.
 set ruler                               " Show cursor position all the time.
 set noincsearch                         " No incremental search.
 set list                                " Show formatting characters.
-set listchars=tab:>-,trail:~,extends:>,precedes:<
+set listchars=tab:>\ ,trail:~,extends:>,precedes:<
 set statusline=%F%m%r%h%w
 set backspace=indent,eol,start
 set autoread                            " Automatically reload external changes.
@@ -29,6 +29,7 @@ let g:pathogen_disabled = []
 
 if v:version < '703' || v:version == '703' && !has('patch584') || !has('python')
 	call add(g:pathogen_disabled, 'vim-youcompleteme')
+	call add(g:pathogen_disabled, 'vim-ctab')
 endif
 
 runtime bundle/vim-pathogen/autoload/pathogen.vim
@@ -50,7 +51,7 @@ if has("gui_running")
 	"colorscheme xoria256
 	colorscheme seoul256-light
 	if has("win32")
-		set guifont=Consolas:h10:cANSI
+		set guifont=Consolas:h9:cANSI
 	else
 		set guifont=Inconsolata\ Medium\ 12
 	endif
