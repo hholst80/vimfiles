@@ -1,11 +1,11 @@
 setlocal foldmethod=expr foldexpr=DiffFold(v:lnum)
 function! DiffFold(lnum)
   let line = getline(a:lnum)
-  if line =~ '^\(diff\|---\|+++\|@@\) '
-    return 1
-  elseif line[0] =~ '[-+ ]'
-    return 2
-  else
+  if line =~ '^\(diff\|Only\|---\|+++\) '
     return 0
+  elseif line =~ '^\(@@\)'
+    return 1
+  else
+    return 2
   endif
 endfunction
