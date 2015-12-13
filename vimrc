@@ -45,6 +45,7 @@ endif
 " GUI settings
 
 if has("gui_running")
+	autocmd GUIEnter * set vb t_vb=
 	let g:solarized_visibility="low"
 	set background=light
 	"colorscheme solarized
