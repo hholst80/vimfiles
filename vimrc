@@ -9,7 +9,7 @@ set novisualbell                        " Disable visual bell.
 set noerrorbells                        " Disable annoying audio beeps.
 set ruler                               " Show cursor position all the time.
 set noincsearch                         " No incremental search.
-set list                                " Show formatting characters.
+"set list                                " Show formatting characters.
 set listchars=tab:>\ ,trail:~,extends:>,precedes:<
 set statusline=%F%m%r%h%w
 set backspace=indent,eol,start
@@ -26,6 +26,7 @@ filetype plugin indent on
 " Load pathogen and insert all bundles.
 
 let g:pathogen_disabled = []
+call add(g:pathogen_disabled, 'vim-youcompleteme')
 
 if v:version < '703' || v:version == '703' && !has('patch584') || !has('python')
 	call add(g:pathogen_disabled, 'vim-youcompleteme')
@@ -76,7 +77,7 @@ let @b = "yiwcw<]pa></]pa>bb"     " XML brackets
 " Highlight all instances of word under cursor, when idle.
 " Useful when studying strange source code.
 " Type z/ to toggle highlighting on/off.
-nnoremap z/ :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
+nnoremap ,z :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
 function! AutoHighlightToggle()
    let @/ = ''
    if exists('#auto_highlight')
