@@ -45,14 +45,16 @@ endif
 " GUI settings
 
 if has("gui_running")
+	set guioptions=egrLt
 	autocmd GUIEnter * set vb t_vb=
 	let g:solarized_visibility="low"
 	set background=light
 	"colorscheme solarized
 	"colorscheme xoria256
-	colorscheme seoul256-light
+	"colorscheme seoul256-light
+	colorscheme vanzan_color
 	if has("win32")
-		set guifont=Consolas:h9:cANSI
+		set guifont=Consolas:h10:cANSI
 	else
 		set guifont=Inconsolata\ Medium\ 12
 	endif
