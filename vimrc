@@ -46,14 +46,15 @@ endif
 " GUI settings
 
 if has("gui_running")
-	set guioptions=egrLt
+	set guioptions=
 	autocmd GUIEnter * set vb t_vb=
 	let g:solarized_visibility="low"
 	set background=light
-	"colorscheme solarized
+	colorscheme solarized
 	"colorscheme xoria256
 	"colorscheme seoul256-light
-	colorscheme vanzan_color
+	"colorscheme vanzan_color
+	"set background=dark
 	if has("win32")
 		set guifont=Consolas:h10:cANSI
 	else
@@ -65,7 +66,10 @@ endif
 
 " Key mappings
 
-nmap <silent> ,/ :nohlsearch<CR>
+nmap <silent> <Leader>/ :nohlsearch<CR>
+nmap <silent> <Leader>1 :colorscheme solarized<CR>:set background=light<CR>
+nmap <silent> <Leader>2 :colorscheme vanzan_color<CR>:set background=dark<CR>
+nmap <silent> <Leader>3 :colorscheme xoria256<CR>:set background=dark<CR>
 
 " AutoCommand settings
 
@@ -79,7 +83,7 @@ let @b = "yiwcw<]pa></]pa>bb"     " XML brackets
 " Highlight all instances of word under cursor, when idle.
 " Useful when studying strange source code.
 " Type z/ to toggle highlighting on/off.
-nnoremap ,z :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
+nnoremap <Leader>z :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
 function! AutoHighlightToggle()
    let @/ = ''
    if exists('#auto_highlight')
