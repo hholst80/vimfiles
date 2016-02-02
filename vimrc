@@ -70,6 +70,7 @@ nmap <silent> <Leader>/ :nohlsearch<CR>
 nmap <silent> <Leader>1 :colorscheme solarized<CR>:set background=light<CR>
 nmap <silent> <Leader>2 :colorscheme vanzan_color<CR>:set background=dark<CR>
 nmap <silent> <Leader>3 :colorscheme xoria256<CR>:set background=dark<CR>
+nmap <silent> <Leader>d :silent !diff -u "#" "%" > E:\diff.patch<CR>
 
 " AutoCommand settings
 
