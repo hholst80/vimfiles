@@ -1,7 +1,19 @@
 " @file vimrc
 " @author Henrik Holst <holst@matmech.com>
 
+" =============================================================================
+" Useful stuff
+" 
+" set guifont=*                         GUI popup font selector.
+" set spell spellang=sv                 Spell checking (Swedish).
+" =============================================================================
+
+" =============================================================================
 " Global settings
+" =============================================================================
+
+syntax enable
+filetype plugin indent on
 
 set nocompatible                        " Disable VI compability.
 set noswapfile                          " Disable swap files.
@@ -20,10 +32,11 @@ set lazyredraw                          " Speed up redrawing.
 set scrolloff=8
 set hlsearch
 set pastetoggle=<INS>
-syntax on
-filetype plugin indent on
+set linebreak
 
+" =============================================================================
 " Load pathogen and insert all bundles.
+" =============================================================================
 
 let g:pathogen_disabled = []
 call add(g:pathogen_disabled, 'vim-youcompleteme')
@@ -37,13 +50,17 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 call pathogen#helptags()
 
+" =============================================================================
 " Default settings and package configuration.
+" =============================================================================
 
 if has("win32")
 	set fileformat=dos
 endif
 
-" GUI settings
+" =============================================================================
+" GUI settings.
+" =============================================================================
 
 if has("gui_running")
 	set guioptions=
@@ -64,27 +81,37 @@ else
 	set background=dark
 endif
 
-" Key mappings
+" =============================================================================
+" Key mappings.
+" =============================================================================
 
 nmap <silent> <Leader>/ :nohlsearch<CR>
 nmap <silent> <Leader>1 :colorscheme solarized<CR>:set background=light<CR>
 nmap <silent> <Leader>2 :colorscheme vanzan_color<CR>:set background=dark<CR>
 nmap <silent> <Leader>3 :colorscheme xoria256<CR>:set background=dark<CR>
 nmap <silent> <Leader>d :silent !diff -u "#" "%" > E:\diff.patch<CR>
+nnoremap <Leader>z :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
 
-" AutoCommand settings
+" =============================================================================
+" Macros.
+" =============================================================================
+
+let @b = "yiwcw<]pa></]pa>bb"     " XML brackets
+
+" =============================================================================
+" AutoCommand settings.
+" =============================================================================
 
 au BufNewFile,BufRead *.build set filetype=xml
 au BufNewFile,BufRead *.c set cindent cinoptions=(0,u0,U0
 
-" Macros
-
-let @b = "yiwcw<]pa></]pa>bb"     " XML brackets
+" =============================================================================
+" Scripts
+" =============================================================================
 
 " Highlight all instances of word under cursor, when idle.
 " Useful when studying strange source code.
-" Type z/ to toggle highlighting on/off.
-nnoremap <Leader>z :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
+
 function! AutoHighlightToggle()
    let @/ = ''
    if exists('#auto_highlight')
