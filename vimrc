@@ -14,8 +14,6 @@
 
 syntax enable
 filetype plugin indent on
-
-set nocompatible                        " Disable VI compability.
 set noswapfile                          " Disable swap files.
 set novisualbell                        " Disable visual bell.
 set noerrorbells                        " Disable annoying audio beeps.
