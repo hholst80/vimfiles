@@ -157,7 +157,7 @@ function! ToggleColorSchemeLight()
 endfunction
 
 function! ToggleColorSchemeDark()
-	let arr=["lxvc", "wombat256", "xoria256", "vanzan_color"]
+	let arr=["lxvc", "wombat256", "xoria256", "vanzan_color", "0x7A69_dark"]
 	if !exists("g:colors_name")
 		let g:colors_name = "default"
 	endif
