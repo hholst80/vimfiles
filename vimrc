@@ -64,7 +64,7 @@ if has("gui_running")
 	set guioptions=
 	autocmd GUIEnter * set vb t_vb=
 	let g:solarized_visibility="low"
-	set background=light
+
 	colorscheme solarized
 	"colorscheme xoria256
 	"colorscheme seoul256-light
@@ -77,6 +77,8 @@ if has("gui_running")
 	endif
 else
 	set background=dark
+	colorscheme wombat256
+	set t_Co=256
 endif
 
 " =============================================================================
@@ -87,6 +89,7 @@ nmap <silent> <Leader>/ :nohlsearch<CR>
 nmap <silent> <Leader>1 :colorscheme solarized<CR>:set background=light<CR>
 nmap <silent> <Leader>2 :colorscheme vanzan_color<CR>:set background=dark<CR>
 nmap <silent> <Leader>3 :colorscheme xoria256<CR>:set background=dark<CR>
+nmap <silent> <Leader>4 :colorscheme wombat256<CR>:set background=dark<CR>
 nmap <silent> <Leader>d :silent !diff -u "#" "%" > E:\diff.patch<CR>
 nnoremap <Leader>z :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
 
