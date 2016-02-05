@@ -141,6 +141,9 @@ endfunction
 
 function! ToggleColorSchemeLight()
 	let arr=["solarized", "PaperColor"]
+	if !exists("g:colors_name")
+		let g:colors_name = "default"
+	endif
 	while 1
 		let rnd=NativeRand()%len(arr)
 		let cs=arr[rnd]
@@ -155,6 +158,9 @@ endfunction
 
 function! ToggleColorSchemeDark()
 	let arr=["lxvc", "wombat256", "xoria256", "vanzan_color"]
+	if !exists("g:colors_name")
+		let g:colors_name = "default"
+	endif
 	while 1
 		let rnd=NativeRand()%len(arr)
 		let cs=arr[rnd]
