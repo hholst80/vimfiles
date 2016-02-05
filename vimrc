@@ -65,20 +65,17 @@ if has("gui_running")
 	autocmd GUIEnter * set vb t_vb=
 	let g:solarized_visibility="low"
 
-	colorscheme solarized
-	"colorscheme xoria256
-	"colorscheme seoul256-light
-	"colorscheme vanzan_color
-	"set background=dark
 	if has("win32")
 		set guifont=Consolas:h10:cANSI
 	else
 		set guifont=Inconsolata\ Medium\ 12
 	endif
 else
-	set background=dark
-	colorscheme wombat256
-	set t_Co=256
+	if $TERM == 'cygwin'
+	else
+		set t_Co=256
+	endif
+
 endif
 
 " =============================================================================
