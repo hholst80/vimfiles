@@ -83,11 +83,9 @@ endif
 " =============================================================================
 
 nmap <silent> <Leader>/ :nohlsearch<CR>
-nmap <silent> <Leader>1 :colorscheme solarized<CR>:set background=light<CR>
-nmap <silent> <Leader>2 :colorscheme vanzan_color<CR>:set background=dark<CR>
-nmap <silent> <Leader>3 :colorscheme xoria256<CR>:set background=dark<CR>
-nmap <silent> <Leader>4 :colorscheme wombat256<CR>:set background=dark<CR>
-nmap <silent> <Leader>d :silent !diff -u "#" "%" > E:\diff.patch<CR>
+nmap <silent> <Leader>1 :call ToggleColorSchemeLight()<CR>
+nmap <silent> <Leader>2 :call ToggleColorSchemeDark()<CR>
+nmap <silent> <Leader>3 :call ToggleColorSchemeDefault()<CR>
 nnoremap <Leader>z :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
 
 " =============================================================================
@@ -127,4 +125,53 @@ function! AutoHighlightToggle()
     echo 'Highlight current word: ON'
   return 1
  endif
+endfunction
+
+function! SystemRand()
+	if has('unix')
+		return system("echo $RANDOM")
+	elseif has('win16') || has('win32') || has('win64')
+		return system("echo %RANDOM%")
+	endif
+endfunction
+
+function! NativeRand()
+	return str2nr(matchstr(reltimestr(reltime()), '\v\.@<=\d+')[1:])
+endfunction
+
+function! ToggleColorSchemeLight()
+	let arr=["solarized", "PaperColor"]
+	while 1
+		let rnd=NativeRand()%len(arr)
+		let cs=arr[rnd]
+		if match(cs, g:colors_name)
+			break
+		endif
+	endwhile
+	set background=light
+	execute "colorscheme ".cs
+	let g:colors_name=cs
+endfunction
+
+function! ToggleColorSchemeDark()
+	let arr=["lxvc", "wombat256", "xoria256", "vanzan_color"]
+	while 1
+		let rnd=NativeRand()%len(arr)
+		let cs=arr[rnd]
+		if match(cs, g:colors_name)
+			break
+		endif
+	endwhile
+	set background=dark
+	execute "colorscheme ".cs
+	let g:colors_name=cs
+endfunction
+
+function! ToggleColorSchemeDefault()
+	if has('gui')
+		set background=light
+	else
+		set background=dark
+	endif
+	colorscheme default
 endfunction
