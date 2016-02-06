@@ -92,7 +92,7 @@ nnoremap <Leader>z :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
 " Macros.
 " =============================================================================
 
-let @b = "yiwcw<]pa></]pa>bb"     " XML brackets
+let @b = "yiwcw<^[]pa></^[]pa>^[bb"
 
 " =============================================================================
 " AutoCommand settings.
