@@ -140,7 +140,8 @@ function! NativeRand()
 endfunction
 
 function! ToggleColorSchemeLight()
-	let arr=["solarized", "PaperColor"]
+	let arr=["solarized", "PaperColor", "github",
+	\        "eclipse"]
 	if !exists("g:colors_name")
 		let g:colors_name = "default"
 	endif
@@ -157,7 +158,8 @@ function! ToggleColorSchemeLight()
 endfunction
 
 function! ToggleColorSchemeDark()
-	let arr=["lxvc", "wombat256", "xoria256", "vanzan_color", "0x7A69_dark"]
+	let arr=["lxvc", "wombat256", "xoria256", 
+	\        "vanzan_color", "0x7A69_dark", "xterm16"]
 	if !exists("g:colors_name")
 		let g:colors_name = "default"
 	endif
