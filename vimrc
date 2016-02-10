@@ -38,6 +38,7 @@ set linebreak
 
 let g:pathogen_disabled = []
 call add(g:pathogen_disabled, 'vim-youcompleteme')
+call add(g:pathogen_disabled, 'vim-neocomplete')
 
 if v:version < '703' || v:version == '703' && !has('patch584') || !has('python')
 	call add(g:pathogen_disabled, 'vim-youcompleteme')
