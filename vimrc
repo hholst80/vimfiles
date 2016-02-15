@@ -31,6 +31,7 @@ set scrolloff=8
 set hlsearch
 set pastetoggle=<INS>
 set linebreak
+set shortmess=atI
 
 " =============================================================================
 " Load pathogen and insert all bundles.
@@ -87,6 +88,7 @@ nmap <silent> <Leader>/ :nohlsearch<CR>
 nmap <silent> <Leader>1 :call ToggleColorSchemeLight()<CR>
 nmap <silent> <Leader>2 :call ToggleColorSchemeDark()<CR>
 nmap <silent> <Leader>3 :call ToggleColorSchemeDefault()<CR>
+nmap <silent> <Leader>d :silent !diff -u "#" "%" > E:\diff.patch<CR>
 nnoremap <Leader>z :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
 
 " =============================================================================
