@@ -56,7 +56,6 @@ call pathogen#helptags()
 
 if has("win32")
 	set fileformat=dos
-	let g:gitgutter_grep_command = 'grep -e'
 endif
 
 " =============================================================================
