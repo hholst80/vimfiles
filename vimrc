@@ -33,7 +33,8 @@ set pastetoggle=<INS>
 set linebreak
 set shortmess=atI
 set updatetime=250
-set clipboard^=unnamed,unnamedplus    " http://bit.ly/1XzQyju
+set clipboard^=unnamed,unnamedplus      " http://bit.ly/1XzQyju
+set incsearch                           " I can never decide on this one...
 
 " =============================================================================
 " Load pathogen and insert all bundles.
@@ -86,11 +87,13 @@ endif
 " Key mappings.
 " =============================================================================
 
-nmap <silent> <Leader>/ :nohlsearch<CR>
+nmap <silent> <Leader><Space> :nohlsearch<CR>
 nmap <silent> <Leader>1 :call ToggleColorSchemeLight()<CR>
 nmap <silent> <Leader>2 :call ToggleColorSchemeDark()<CR>
 nmap <silent> <Leader>3 :call ToggleColorSchemeDefault()<CR>
 nmap <silent> <Leader>d :silent !diff -u "#" "%" > E:\diff.patch<CR>
+nmap <silent> <Leader>k :1,$d<CR>
+nnoremap <Leader>/ /\c
 nnoremap <Leader>z :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
 
 " =============================================================================
