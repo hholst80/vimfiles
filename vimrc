@@ -32,6 +32,7 @@ set hlsearch
 set pastetoggle=<INS>
 set linebreak
 set shortmess=atI
+set updatetime=250
 
 " =============================================================================
 " Load pathogen and insert all bundles.
