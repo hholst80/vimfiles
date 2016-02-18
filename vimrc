@@ -33,6 +33,7 @@ set pastetoggle=<INS>
 set linebreak
 set shortmess=atI
 set updatetime=250
+set clipboard^=unnamed,unnamedplus    " http://bit.ly/1XzQyju
 
 " =============================================================================
 " Load pathogen and insert all bundles.
