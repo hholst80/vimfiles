@@ -24,4 +24,4 @@
 	url = https://github.com/junegunn/seoul256.vim
 [submodule "bundle/vim-gitgutter"]
 	path = bundle/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
+	url = https://github.com/airblade/vim-gitgutter
