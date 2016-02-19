@@ -18,7 +18,7 @@ set noswapfile                          " Disable swap files.
 set novisualbell                        " Disable visual bell.
 set noerrorbells                        " Disable annoying audio beeps.
 set ruler                               " Show cursor position all the time.
-set noincsearch                         " No incremental search.
+set incsearch                           " Incremental search.
 "set list                                " Show formatting characters.
 set listchars=tab:>\ ,trail:~,extends:>,precedes:<
 set statusline=%F%m%r%h%w
@@ -34,7 +34,6 @@ set linebreak
 set shortmess=atI
 set updatetime=250
 set clipboard^=unnamed,unnamedplus      " http://bit.ly/1XzQyju
-set incsearch                           " I can never decide on this one...
 
 " =============================================================================
 " Load pathogen and insert all bundles.
