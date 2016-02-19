@@ -92,7 +92,7 @@ nmap <silent> <Leader>1 :call ToggleColorSchemeLight()<CR>
 nmap <silent> <Leader>2 :call ToggleColorSchemeDark()<CR>
 nmap <silent> <Leader>3 :call ToggleColorSchemeDefault()<CR>
 nmap <silent> <Leader>d :silent !diff -u "#" "%" > E:\diff.patch<CR>
-nmap <silent> <Leader>k :1,$d<CR>
+nmap <silent> <Leader>k :1,$d _<CR>
 nnoremap <Leader>/ /\c
 nnoremap <Leader>z :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
 
