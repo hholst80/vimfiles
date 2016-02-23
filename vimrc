@@ -31,8 +31,8 @@ set scrolloff=8
 set hlsearch
 set pastetoggle=<INS>
 set linebreak
-set shortmess=aoOtI
-set updatetime=250
+set shortmess=aoOtI                     " http://bit.ly/1Q8NyFE
+set updatetime=500
 set clipboard^=unnamed,unnamedplus      " http://bit.ly/1XzQyju
 
 " =============================================================================
