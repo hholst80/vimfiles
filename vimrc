@@ -96,7 +96,8 @@ nmap <silent> <Leader>3 :call ToggleColorSchemeDefault()<CR>
 nmap <silent> <Leader>d :silent !diff -u "#" "%" > E:\diff.patch<CR>
 nmap <silent> <Leader>p :1,$d _<CR>P
 nmap <silent> <Leader>ve :tabnew $MYVIMRC<CR>
-nmap <silent> <Leader>vr :source $MYVIMRC<CR>
+nmap <silent> <Leader>vs :source $MYVIMRC<CR>
+nmap <Leader>s :GitGutterStageHunk<CR>
 nmap <silent> Y :.,$y<CR>
 nnoremap <Leader>/ /\c
 nnoremap <Leader>z :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
