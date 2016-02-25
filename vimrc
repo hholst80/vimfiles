@@ -26,7 +26,6 @@ set listchars=tab:>\ ,trail:~,extends:>,precedes:<
 set noerrorbells                        " Disable annoying audio beeps.
 set nolist                              " Formatting characters.
 set noswapfile                          " Disable swap files.
-set novisualbell                        " Disable visual bell.
 set pastetoggle=<INS>
 set ruler                               " Show cursor position all the time.
 set scrolloff=8
@@ -180,7 +179,8 @@ endfunction
 
 function! ToggleColorSchemeDark()
 	let arr=["lxvc", "wombat256", "xoria256", 
-	\        "vanzan_color", "0x7A69_dark", "xterm16"]
+	\        "vanzan_color", "0x7A69_dark", "xterm16",
+	\        "mustang" ]
 	if !exists("g:colors_name")
 		let g:colors_name = "default"
 	endif
