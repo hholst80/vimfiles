@@ -14,9 +14,10 @@
 
 syntax enable
 filetype plugin indent on
-set autoread                            " Automatically reload external changes.
+set autoread                            " Automatically reload changes.
 set backspace=indent,eol,start
 set clipboard^=unnamed,unnamedplus      " http://bit.ly/1XzQyju
+set gdefault
 set hlsearch
 set incsearch                           " Incremental search.
 set laststatus=2
