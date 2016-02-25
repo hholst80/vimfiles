@@ -14,26 +14,28 @@
 
 syntax enable
 filetype plugin indent on
+set autoread                            " Automatically reload external changes.
+set backspace=indent,eol,start
+set clipboard^=unnamed,unnamedplus      " http://bit.ly/1XzQyju
+set hlsearch
+set incsearch                           " Incremental search.
+set laststatus=2
+set lazyredraw                          " Speed up redrawing.
+set linebreak
+set listchars=tab:>\ ,trail:~,extends:>,precedes:<
+set noerrorbells                        " Disable annoying audio beeps.
+set nolist                              " Formatting characters.
 set noswapfile                          " Disable swap files.
 set novisualbell                        " Disable visual bell.
-set noerrorbells                        " Disable annoying audio beeps.
-set ruler                               " Show cursor position all the time.
-set incsearch                           " Incremental search.
-"set list                                " Show formatting characters.
-set listchars=tab:>\ ,trail:~,extends:>,precedes:<
-set statusline=%F%m%r%h%w
-set backspace=indent,eol,start
-set autoread                            " Automatically reload external changes.
-set ttyfast                             " Speed up Vim session. [Alex Pounds]
-set title                               " Change terminal title.
-set lazyredraw                          " Speed up redrawing.
-set scrolloff=8
-set hlsearch
 set pastetoggle=<INS>
-set linebreak
+set ruler                               " Show cursor position all the time.
+set scrolloff=8
 set shortmess=aoOtI                     " http://bit.ly/1Q8NyFE
+set showmatch                           " Show matching parenthesis.
+set statusline=%F%m%r%h%w
+set title                               " Change terminal title.
+set ttyfast                             " Speed up Vim session. [Alex Pounds]
 set updatetime=500
-set clipboard^=unnamed,unnamedplus      " http://bit.ly/1XzQyju
 
 " =============================================================================
 " Load pathogen and insert all bundles.
@@ -95,6 +97,17 @@ nmap <silent> <Leader>p :1,$d _<CR>P
 nmap <silent> Y :.,$y<CR>
 nnoremap <Leader>/ /\c
 nnoremap <Leader>z :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
+
+nmap <leader>f0 :set foldlevel=0<CR>
+nmap <leader>f1 :set foldlevel=1<CR>
+nmap <leader>f2 :set foldlevel=2<CR>
+nmap <leader>f3 :set foldlevel=3<CR>
+nmap <leader>f4 :set foldlevel=4<CR>
+nmap <leader>f5 :set foldlevel=5<CR>
+nmap <leader>f6 :set foldlevel=6<CR>
+nmap <leader>f7 :set foldlevel=7<CR>
+nmap <leader>f8 :set foldlevel=8<CR>
+nmap <leader>f9 :set foldlevel=9<CR>
 
 " =============================================================================
 " Macros.
