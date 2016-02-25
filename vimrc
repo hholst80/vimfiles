@@ -44,6 +44,7 @@ set updatetime=500
 let g:pathogen_disabled = []
 call add(g:pathogen_disabled, 'vim-youcompleteme')
 call add(g:pathogen_disabled, 'vim-neocomplete')
+call add(g:pathogen_disabled, 'vim-bookmarks')
 
 if v:version < '703' || v:version == '703' && !has('patch584') || !has('python')
 	call add(g:pathogen_disabled, 'vim-youcompleteme')
