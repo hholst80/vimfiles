@@ -98,7 +98,9 @@ nmap <silent> <Leader>p :1,$d _<CR>P
 nmap <silent> <Leader>ve :tabnew $MYVIMRC<CR>
 nmap <silent> <Leader>vs :source $MYVIMRC<CR>
 nmap <Leader>s :GitGutterStageHunk<CR>
-nmap <silent> Y :.,$y<CR>
+nmap Y :.,$y<CR>
+nmap %y :%y<CR>
+nmap ns :tabnew<CR>:setlocal buftype=nofile bufhidden=hide noswapfile<CR>
 nnoremap <Leader>/ /\c
 nnoremap <Leader>z :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
 
