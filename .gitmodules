@@ -28,3 +28,6 @@
 [submodule "bundle/vim-bookmarks"]
 	path = bundle/vim-bookmarks
 	url = https://github.com/MattesGroeger/vim-bookmarks.git
+[submodule "bundle/vim-vimproc"]
+	path = bundle/vim-vimproc
+	url = https://github.com/Shougo/vimproc.vim
