@@ -71,18 +71,19 @@ if has("gui_running")
 	set guioptions=
 	autocmd GUIEnter * set vb t_vb=
 	let g:solarized_visibility="low"
-
-	if has("win32")
-		set guifont=Consolas:h10:cANSI
-	else
-		set guifont=Inconsolata\ Medium\ 12
-	endif
 else
 	if $TERM == 'cygwin'
 	else
 		set t_Co=256
 	endif
+endif
 
+if has("gui_running") && &guifont == ""
+	if has("win32")
+		set guifont=Consolas:h10:cANSI
+	else
+		set guifont=Inconsolata\ Medium\ 12
+	endif
 endif
 
 " =============================================================================
@@ -100,9 +101,13 @@ nmap <silent> <Leader>vs :source $MYVIMRC<CR>
 nmap <Leader>s :GitGutterStageHunk<CR>
 nmap Y :.,$y<CR>
 nmap %y :%y<CR>
+nmap %Y :%y<CR>
 nmap ns :tabnew<CR>:setlocal buftype=nofile bufhidden=hide noswapfile<CR>
 nnoremap <Leader>/ /\c
 nnoremap <Leader>z :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
+nmap <c-s> :w<cr>
+imap <c-s> <c-o>:w<cr>
+vmap <c-s> <esc>:w<cr>gv
 
 nmap <leader>f0 :set foldlevel=0<CR>
 nmap <leader>f1 :set foldlevel=1<CR>
