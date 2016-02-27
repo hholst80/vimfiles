@@ -31,3 +31,6 @@
 [submodule "bundle/vim-vimproc"]
 	path = bundle/vim-vimproc
 	url = https://github.com/Shougo/vimproc.vim
+[submodule "bundle/vim-lightline"]
+	path = bundle/vim-lightline
+	url = https://github.com/itchyny/lightline.vim
