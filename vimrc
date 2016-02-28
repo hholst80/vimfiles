@@ -32,7 +32,6 @@ set ruler                               " Show cursor position all the time.
 set scrolloff=8
 set shortmess=aoOtI                     " http://bit.ly/1Q8NyFE
 set showmatch                           " Show matching parenthesis.
-set statusline=%F%m%r%h%w
 set title                               " Change terminal title.
 set ttyfast                             " Speed up Vim session. [Alex Pounds]
 set updatetime=500
@@ -45,6 +44,7 @@ let g:pathogen_disabled = []
 call add(g:pathogen_disabled, 'vim-youcompleteme')
 call add(g:pathogen_disabled, 'vim-neocomplete')
 call add(g:pathogen_disabled, 'vim-bookmarks')
+call add(g:pathogen_disabled, 'vim-colorscheme-switcher')
 
 if v:version < '703' || v:version == '703' && !has('patch584') || !has('python')
 	call add(g:pathogen_disabled, 'vim-youcompleteme')
@@ -108,6 +108,7 @@ nnoremap <Leader>z :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
 nmap <c-s> :w<cr>
 imap <c-s> <c-o>:w<cr>
 vmap <c-s> <esc>:w<cr>gv
+nmap <c-f> :call QuietSearch(inputdialog("what? "))<cr>:copen<cr>:set nowrap<cr><c-w>K
 
 nmap <leader>f0 :set foldlevel=0<CR>
 nmap <leader>f1 :set foldlevel=1<CR>
@@ -127,14 +128,7 @@ nmap <leader>f9 :set foldlevel=9<CR>
 let @b = "yiwcw<^[]pa></^[]pa>^[bb"
 
 " =============================================================================
-" AutoCommand settings.
-" =============================================================================
-
-au BufNewFile,BufRead *.build set filetype=xml
-au BufNewFile,BufRead *.c set cindent cinoptions=(0,u0,U0
-
-" =============================================================================
-" Scripts
+" Scripts.
 " =============================================================================
 
 " Highlight all instances of word under cursor, when idle.
@@ -216,3 +210,22 @@ function! ToggleColorSchemeDefault()
 	endif
 	colorscheme default
 endfunction
+
+function! QuietSearch(expr)
+	cexpr []
+	execute "silent! bufdo vimgrepadd /".a:expr."/ %"
+endfunction
+
+" =============================================================================
+" Auto command settings.
+" =============================================================================
+
+augroup filetype_build
+	au!
+	au BufNewFile,BufRead *.build setlocal filetype=xml
+augroup END
+
+augroup filetype_c
+	au!
+	au BufNewFile,BufRead *.c setlocal cindent cinoptions=(0,u0,U0
+augroup END
