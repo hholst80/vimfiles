@@ -2,7 +2,7 @@ setlocal expandtab
 setlocal shiftwidth=2
 setlocal textwidth=72
 setlocal smartindent
-setlocal colorcolumn=7,73
+setlocal colorcolumn=6,73
 inoremap <buffer> <TAB> <C-R>=fortran#tabstop()<CR>
 
 function! fortran#tabstop()

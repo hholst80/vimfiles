@@ -34,3 +34,9 @@
 [submodule "bundle/vim-lightline"]
 	path = bundle/vim-lightline
 	url = https://github.com/itchyny/lightline.vim
+[submodule "bundle/vim-colorscheme-switcher"]
+	path = bundle/vim-colorscheme-switcher
+	url = https://github.com/xolox/vim-colorscheme-switcher
+[submodule "bundle\\vim-colors-solarized"]
+	path = bundle\\vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized
