@@ -105,9 +105,9 @@ nmap %Y :%y<CR>
 nmap ns :tabnew<CR>:setlocal buftype=nofile bufhidden=hide noswapfile<CR>
 nnoremap <Leader>/ /\c
 nnoremap <Leader>z :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
-nmap <c-s> :w<cr>
-imap <c-s> <c-o>:w<cr>
-vmap <c-s> <esc>:w<cr>gv
+nmap <C-s> :w<CR>
+imap <C-s> <C-o>:w<CR>
+vmap <C-s> <Esc>:w<CR>gv
 
 nmap <leader>f0 :set foldlevel=0<CR>
 nmap <leader>f1 :set foldlevel=1<CR>
