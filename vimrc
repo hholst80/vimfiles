@@ -18,7 +18,7 @@ set autoread                            " Automatically reload changes.
 set backspace=indent,eol,start
 set clipboard^=unnamed,unnamedplus      " http://bit.ly/1XzQyju
 set gdefault
-set hlsearch
+set nohlsearch                          " No, I don't like it again.
 set incsearch                           " Incremental search.
 set laststatus=2
 set lazyredraw                          " Speed up redrawing.
@@ -102,12 +102,13 @@ nmap <Leader>s :GitGutterStageHunk<CR>
 nmap Y :.,$y<CR>
 nmap %y :%y<CR>
 nmap %Y :%y<CR>
-nmap ns :tabnew<CR>:setlocal buftype=nofile bufhidden=hide noswapfile<CR>
 nnoremap <Leader>/ /\c
 nnoremap <Leader>z :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
 nmap <C-s> :w<CR>
 imap <C-s> <C-o>:w<CR>
 vmap <C-s> <Esc>:w<CR>gv
+nmap <C-n> :tabnew<CR>:setlocal buftype=nofile bufhidden=hide noswapfile<CR>
+imap <C-n> <C-o>:tabnew<CR><C-o>:setlocal buftype=nofile bufhidden=hide noswapfile<CR>
 
 nmap <leader>f0 :set foldlevel=0<CR>
 nmap <leader>f1 :set foldlevel=1<CR>
@@ -125,6 +126,7 @@ nmap <leader>f9 :set foldlevel=9<CR>
 " =============================================================================
 
 let @b = "yiwcw<^[]pa></^[]pa>^[bb"
+let @u = "yyp:s/./=/\r"
 
 " =============================================================================
 " AutoCommand settings.
