@@ -27,3 +27,11 @@ git config --global credential.helper cache
 
 [git:wincred]: https://help.github.com/articles/caching-your-github-password-in-git/
 [git:credential]: https://git-scm.com/docs/git-credential-cache
+
+# Vim
+
+## Ignore whitespace in diff
+
+```
+set diffopt+=iwhite
+```
