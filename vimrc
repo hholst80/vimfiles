@@ -38,6 +38,13 @@ set updatetime=500
 set cryptmethod=blowfish2               " Requires Vim 7.4.399 or later.
 set nojoinspaces                        " gq should not keep double spaces
 set nowrap
+if has('win32')
+	set directory=$HOME/vimfiles/swapfiles
+	set backupdir=$HOME/vimfiles/backups
+else
+	set directory=$HOME/.vim/swapfiles
+	set backupdir=$HOME/.vim/backups
+endif
 
 " =============================================================================
 " Load pathogen and insert all bundles.
@@ -57,14 +64,6 @@ endif
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 call pathogen#helptags()
-
-" =============================================================================
-" Default settings and package configuration.
-" =============================================================================
-
-if has("win32")
-	set fileformat=dos
-endif
 
 " =============================================================================
 " GUI settings.
