@@ -36,6 +36,8 @@ set title                               " Change terminal title.
 set ttyfast                             " Speed up Vim session. [Alex Pounds]
 set updatetime=500
 set cryptmethod=blowfish2               " Requires Vim 7.4.399 or later.
+set nojoinspaces                        " gq should not keep double spaces
+set nowrap
 
 " =============================================================================
 " Load pathogen and insert all bundles.
