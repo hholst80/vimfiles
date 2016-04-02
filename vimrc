@@ -9,6 +9,14 @@
 " =============================================================================
 
 " =============================================================================
+" TODO
+" 
+" --remote-tab-wait -d for vimdiff in existing session.
+" set cryptmethod=blowfish2 does not seem to work?
+" CTRL-S is traped by terminal and not sent to Vim. What does CTRL-S do?
+" =============================================================================
+
+" =============================================================================
 " Global settings
 " =============================================================================
 
@@ -17,12 +25,11 @@ filetype plugin indent on
 set autoread                            " Automatically reload changes.
 set backspace=indent,eol,start
 set clipboard^=unnamed,unnamedplus      " http://bit.ly/1XzQyju
-set gdefault
+set gdefault                            " :substitute flag 'g' is default on
 set nohlsearch                          " No, I don't like it again.
 set incsearch                           " Incremental search.
 set laststatus=2
 set lazyredraw                          " Speed up redrawing.
-set linebreak
 set listchars=tab:>\ ,trail:~,extends:>,precedes:<
 set noerrorbells                        " Disable annoying audio beeps.
 set nolist                              " Formatting characters.
@@ -36,6 +43,17 @@ set title                               " Change terminal title.
 set ttyfast                             " Speed up Vim session. [Alex Pounds]
 set updatetime=500
 set cryptmethod=blowfish2               " Requires Vim 7.4.399 or later.
+set nojoinspaces                        " gq should not keep double spaces
+set nowrap
+set linebreak
+
+if has('win32')                         " Swapfiles and backup are not used
+	set directory=$HOME/vimfiles/swapfiles
+	set backupdir=$HOME/vimfiles/backups
+else
+	set directory=$HOME/.vim/swapfiles
+	set backupdir=$HOME/.vim/backups
+endif
 
 " =============================================================================
 " Load pathogen and insert all bundles.
@@ -55,14 +73,6 @@ endif
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 call pathogen#helptags()
-
-" =============================================================================
-" Default settings and package configuration.
-" =============================================================================
-
-if has("win32")
-	set fileformat=dos
-endif
 
 " =============================================================================
 " GUI settings.
