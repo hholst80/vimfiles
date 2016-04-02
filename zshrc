@@ -41,10 +41,11 @@ antigen theme robbyrussell
 antigen apply
 
 # http://superuser.com/questions/480928/is-there-any-command-like-time-but-for-memory-usage
-TIMEFMT='%J   %U  user %S system %P cpu %*E total
-avg shared (code):         %X KB
-avg unshared (data/stack): %D KB
-total (sum):               %K KB
+TIMEFMT='%J
+user:                      %U
+system:                    %S
+cpu:                       %P
+total:                     %*E
 max memory:                %M MB
 page faults from disk:     %F
 other page faults:         %R'
