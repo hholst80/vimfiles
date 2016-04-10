@@ -35,3 +35,11 @@ git config --global credential.helper cache
 ```
 set diffopt+=iwhite
 ```
+
+# VMware
+
+## Debian testing
+
+Installing VMware Tools for Linux Guests
+
+https://communities.vmware.com/thread/509898?start=0
