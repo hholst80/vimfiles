@@ -41,3 +41,11 @@ set diffopt+=iwhite
 Hit `CTRL-R` and then `"`
 
 http://stackoverflow.com/questions/3997078/how-to-paste-yanked-text-into-vim-command-line
+
+# VMware
+
+## Debian testing
+
+Installing VMware Tools for Linux Guests
+
+https://communities.vmware.com/thread/509898?start=0
