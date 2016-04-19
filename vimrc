@@ -55,6 +55,8 @@ else
 	set backupdir=$HOME/.vim/backups
 endif
 
+let g:html_dynamic_folds=1              " Save entire diff (folded) in html.
+
 " =============================================================================
 " Load pathogen and insert all bundles.
 " =============================================================================
