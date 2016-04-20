@@ -40,3 +40,6 @@
 [submodule "bundle\\vim-colors-solarized"]
 	path = bundle\\vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized
+[submodule "bundle/vim-diff-enhanched"]
+	path = bundle/vim-diff-enhanched
+	url = https://github.com/chrisbra/vim-diff-enhanced.git
