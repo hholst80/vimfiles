@@ -244,3 +244,17 @@ augroup filetype_c
 	au!
 	au BufNewFile,BufRead *.c setlocal cindent cinoptions=(0,u0,U0
 augroup END
+
+# http://vim.wikia.com/wiki/How_to_make_fileencoding_work_in_the_modeline
+
+function! CheckFileEncoding()
+  if exists('b:fenc_at_read') && &fileencoding != b:fenc_at_read
+    exec 'e! ++enc=' . &fileencoding
+    unlet b:fenc_at_read
+  endif
+endfunction
+
+augroup aug_fileencoding
+	au BufRead     * let b:fenc_at_read=&fileencoding
+	au BufWinEnter * call CheckFileEncoding()
+augroup END
