@@ -135,6 +135,16 @@ nmap <leader>f7 :set foldlevel=7<CR>
 nmap <leader>f8 :set foldlevel=8<CR>
 nmap <leader>f9 :set foldlevel=9<CR>
 
+nmap <silent> <M-1> :tabnext 1<CR>
+nmap <silent> <M-2> :tabnext 2<CR>
+nmap <silent> <M-3> :tabnext 3<CR>
+nmap <silent> <M-4> :tabnext 4<CR>
+nmap <silent> <M-5> :tabnext 5<CR>
+nmap <silent> <M-6> :tabnext 6<CR>
+nmap <silent> <M-7> :tabnext 7<CR>
+nmap <silent> <M-8> :tabnext 8<CR>
+nmap <silent> <M-9> :tabnext 9<CR>
+
 " =============================================================================
 " Macros.
 " =============================================================================
