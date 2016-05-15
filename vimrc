@@ -93,7 +93,7 @@ endif
 
 if has("gui_running") && &guifont == ""
 	if has("win32")
-		set guifont=Consolas:h9:cANSI
+		set guifont=Consolas:h10:cANSI
 	else
 		set guifont=Inconsolata\ Medium\ 12
 	endif
