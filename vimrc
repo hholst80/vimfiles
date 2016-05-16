@@ -95,7 +95,7 @@ if has("gui_running") && &guifont == ""
 	if has("win32")
 		set guifont=Consolas:h10:cANSI
 	else
-		set guifont=Inconsolata\ Medium\ 12
+		set guifont=Ubuntu\ Mono\ 12
 	endif
 endif
 
@@ -122,6 +122,7 @@ nmap <C-s> :w<CR>
 imap <C-s> <C-o>:w<CR>
 vmap <C-s> <Esc>:w<CR>gv
 nmap <C-n> :tabnew<CR>:setlocal buftype=nofile bufhidden=hide noswapfile<CR>
+nmap <M-n> :enew<CR>:setlocal buftype=nofile bufhidden=hide noswapfile<CR>
 imap <C-n> <C-o>:tabnew<CR><C-o>:setlocal buftype=nofile bufhidden=hide noswapfile<CR>
 
 nmap <leader>f0 :set foldlevel=0<CR>
