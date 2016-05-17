@@ -117,7 +117,8 @@ nmap %y :%y<CR>
 nmap %Y :%y<CR>
 nnoremap <Leader>/ /\c
 nnoremap <Leader>z :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
-nmap <c-f> :call QuietSearch(inputdialog("what? "))<cr>:copen<cr>:set nowrap<cr><c-w>K
+"nmap <c-f> :call QuietSearch(inputdialog("what? "))<cr>:copen<cr>:set nowrap<cr><c-w>K
+nmap <C-f> :Unite grep:.<CR>
 nmap <C-s> :w<CR>
 imap <C-s> <C-o>:w<CR>
 vmap <C-s> <Esc>:w<CR>gv
@@ -152,6 +153,18 @@ nmap <silent> <M-9> :tabnext 9<CR>
 
 let @b = "yiwcw<pa></pa>bb"
 let @u = "yyp:s/./=/\r"
+
+" =============================================================================
+" https://github.com/monochromegane/the_platinum_searcher
+" =============================================================================
+
+nnoremap <silent> ,g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+if executable('pt')
+  let g:unite_source_grep_command = 'pt'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --'
+  let g:unite_source_grep_recursive_opt = ''
+  let g:unite_source_grep_encoding = 'utf-8'
+endif
 
 " =============================================================================
 " Scripts.
