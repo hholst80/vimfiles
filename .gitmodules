@@ -43,3 +43,6 @@
 [submodule "bundle/vim-diff-enhanched"]
 	path = bundle/vim-diff-enhanched
 	url = https://github.com/chrisbra/vim-diff-enhanced.git
+[submodule "bundle/vim-unite"]
+	path = bundle/vim-unite
+	url = https://github.com/Shougo/unite.vim
