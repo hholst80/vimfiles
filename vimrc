@@ -269,6 +269,29 @@ augroup filetype_c
 	au BufNewFile,BufRead *.c setlocal cindent cinoptions=(0,u0,U0
 augroup END
 
+function! PreviewGitHunk()
+	if &previewwindow
+		return
+	endif
+	try
+		silent! call gitgutter#preview_hunk()
+	catch
+		return
+	endtry
+	silent! wincmd P                " jump to preview window
+	if &previewwindow               " if we really get there...
+		if has("folding")
+			silent! .foldopen! " don't want a closed fold
+		endif
+	endif
+	wincmd p                        " Back to old window
+endfunction
+
+augroup filetype_previewwindow
+	au!
+	au CursorHold * nested call PreviewGitHunk()
+augroup END
+
 " http://vim.wikia.com/wiki/How_to_make_fileencoding_work_in_the_modeline
 
 function! CheckFileEncoding()
