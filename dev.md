@@ -2,28 +2,27 @@
 
 ## Use Vim as a merge tool
 
-```
-git config merge.tool vimdiff
-git config merge.conflictstyle diff3
-git config mergetool.prompt false
-git mergetool
-```
+    git config --global merge.tool vimdiff
+    git config --global merge.conflictstyle diff3
+    git config --global mergetool.prompt false
+    git mergetool
 
 http://www.rosipov.com/blog/use-vimdiff-as-git-mergetool/
+
+## Use vimdiff as a difftool
+
+    git config --global diff.tool gvimdiff
+
 
 ## Authentication cache
 
 Windows [git:wincred]:
 
-```
-git config --global credential.helper wincred
-```
+    git config --global credential.helper wincred
 
 GNU/Linux [git:credential]
 
-```
-git config --global credential.helper cache
-```
+    git config --global credential.helper cache
 
 [git:wincred]: https://help.github.com/articles/caching-your-github-password-in-git/
 [git:credential]: https://git-scm.com/docs/git-credential-cache
@@ -32,9 +31,7 @@ git config --global credential.helper cache
 
 ## Ignore whitespace in diff
 
-```
-set diffopt+=iwhite
-```
+    set diffopt+=iwhite
 
 ## Paste yanked text in Vim command line
 
