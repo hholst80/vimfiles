@@ -13,7 +13,6 @@ http://www.rosipov.com/blog/use-vimdiff-as-git-mergetool/
 
     git config --global diff.tool gvimdiff
 
-
 ## Authentication cache
 
 Windows [git:wincred]:
