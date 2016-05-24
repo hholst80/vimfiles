@@ -1,10 +1,3 @@
-# Best (and safest) way to merge a git branch into master
-
-    git checkout master
-    git pull origin master
-    git merge test
-    git push origin master
-
 # Broadcast ping on LAN adress `192.168.0.0/24`:
 
 `cmd.exe`
