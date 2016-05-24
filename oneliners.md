@@ -15,3 +15,16 @@
 # Remove first page in a pdf file
 
     pdftk input.pdf cat 2-end output output.pdf
+
+# Debian testing
+
+Installing VMware Tools for Linux Guests
+
+https://communities.vmware.com/thread/509898?start=0
+
+~~~
+root@debian:~/vmware-tools-patches/vmware-tools-distrib# ./vmware-install.pl 
+open-vm-tools are available from the OS vendor and VMware recommends using 
+open-vm-tools. See http://kb.vmware.com/kb/2073803 for more information.
+Do you still want to proceed with this legacy installer? [yes] no
+~~~
