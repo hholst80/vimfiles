@@ -18,25 +18,19 @@
 
 " =============================================================================
 " Global settings
+" NOTE: Load sensible.vim from tpope so no need to re-set those here.
 " =============================================================================
 
-syntax enable
-filetype plugin indent on
-set autoread                            " Automatically reload changes.
-set backspace=indent,eol,start
 set clipboard^=unnamed,unnamedplus      " http://bit.ly/1XzQyju
 set gdefault                            " :substitute flag 'g' is default on
 set nohlsearch                          " No, I don't like it again.
 set incsearch                           " Incremental search.
-set laststatus=2
 set lazyredraw                          " Speed up redrawing.
-set listchars=tab:>\ ,trail:~,extends:>,precedes:<
 set noerrorbells                        " Disable annoying audio beeps.
 set nolist                              " Formatting characters.
 set noswapfile                          " Disable swap files.
 set pastetoggle=<INS>
-set ruler                               " Show cursor position all the time.
-set scrolloff=8
+set scrolloff=8                         " Override sensible.vim default (was 1)
 set shortmess=aoOtI                     " http://bit.ly/1Q8NyFE
 set showmatch                           " Show matching parenthesis.
 set title                               " Change terminal title.
@@ -278,11 +272,13 @@ function! PreviewGitHunk()
 	catch
 		return
 	endtry
+	let ft=&ft
 	silent! wincmd P                " jump to preview window
 	if &previewwindow               " if we really get there...
 		if has("folding")
 			silent! .foldopen! " don't want a closed fold
 		endif
+		exec 'setlocal filetype=' . ft
 	endif
 	wincmd p                        " Back to old window
 endfunction
