@@ -46,3 +46,6 @@
 [submodule "bundle/vim-unite"]
 	path = bundle/vim-unite
 	url = https://github.com/Shougo/unite.vim
+[submodule "bundle/vim-sensible"]
+	path = bundle/vim-sensible
+	url = https://github.com/tpope/vim-sensible.git
