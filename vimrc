@@ -283,10 +283,10 @@ function! PreviewGitHunk()
 	wincmd p                        " Back to old window
 endfunction
 
-augroup filetype_previewwindow
-	au!
-	au CursorHold * nested call PreviewGitHunk()
-augroup END
+" augroup filetype_previewwindow
+" 	au!
+" 	au CursorHold * nested call PreviewGitHunk()
+" augroup END
 
 " http://vim.wikia.com/wiki/How_to_make_fileencoding_work_in_the_modeline
 
