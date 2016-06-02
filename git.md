@@ -26,6 +26,7 @@
 	last = log -1 HEAD
 	exec = "! "
 	root = rev-parse --show-toplevel
+	fap = fetch --all --prune
 ```
 
 # Authentication cache
