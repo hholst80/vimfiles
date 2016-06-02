@@ -27,6 +27,8 @@
 	exec = "! "
 	root = rev-parse --show-toplevel
 	fap = fetch --all --prune
+	spush = stash push
+	spop = stash pop
 ```
 
 # Authentication cache
