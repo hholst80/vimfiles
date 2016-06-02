@@ -24,11 +24,12 @@
 	ci = commit
 	st = status
 	last = log -1 HEAD
+	ls = log --oneline
 	exec = "! "
 	root = rev-parse --show-toplevel
 	fap = fetch --all --prune
-	spush = stash push
 	spop = stash pop
+	sls = stash list
 ```
 
 # Authentication cache
