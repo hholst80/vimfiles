@@ -90,6 +90,7 @@ else
 endif
 
 if has("gui_running") && &guifont == ""
+	colorscheme github
 	if has("win32")
 		set guifont=Consolas:h10:cANSI
 	else
