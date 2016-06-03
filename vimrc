@@ -41,6 +41,10 @@ set nojoinspaces                        " gq should not keep double spaces
 set nowrap
 set linebreak
 
+if &diff                                " Disable readonly for vimdiff.
+	setlocal noro
+endif
+
 if has('win32')                         " Swapfiles and backup are not used
 	set directory=$HOME/vimfiles/swapfiles
 	set backupdir=$HOME/vimfiles/backups
@@ -140,6 +144,8 @@ nmap <silent> <M-6> :tabnext 6<CR>
 nmap <silent> <M-7> :tabnext 7<CR>
 nmap <silent> <M-8> :tabnext 8<CR>
 nmap <silent> <M-9> :tabnext 9<CR>
+
+nmap f viw<Esc>`<
 
 " =============================================================================
 " Macros.
