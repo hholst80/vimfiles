@@ -28,3 +28,8 @@ open-vm-tools are available from the OS vendor and VMware recommends using
 open-vm-tools. See http://kb.vmware.com/kb/2073803 for more information.
 Do you still want to proceed with this legacy installer? [yes] no
 ~~~
+
+# Reload `.tmux.conf`
+
+    # type this in terminal
+    $ tmux source-file ~/.tmux.conf
