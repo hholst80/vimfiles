@@ -23,7 +23,7 @@
 
 set clipboard^=unnamed,unnamedplus      " http://bit.ly/1XzQyju
 set gdefault                            " :substitute flag 'g' is default on
-set nohlsearch                          " No, I don't like it again.
+set hlsearch                            " I like it again.
 set incsearch                           " Incremental search.
 set lazyredraw                          " Speed up redrawing.
 set noerrorbells                        " Disable annoying audio beeps.
@@ -115,7 +115,8 @@ nmap Y :.,$y<CR>
 nmap %y :%y<CR>
 nmap %Y :%y<CR>
 nnoremap <Leader>/ /\c
-nnoremap <Leader>z :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
+"nnoremap <Leader>z :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
+nnoremap <silent> <Leader>z :let @/ = '\V\<'.escape(expand('<cword>'), '\').'\>'<CR>
 "nmap <c-f> :call QuietSearch(inputdialog("what? "))<cr>:copen<cr>:set nowrap<cr><c-w>K
 nmap <C-f> :Unite grep:.<CR>
 nmap <C-s> :w<CR>
