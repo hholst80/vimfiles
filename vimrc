@@ -82,11 +82,6 @@ if has("gui_running")
 	set guioptions=
 	autocmd GUIEnter * set vb t_vb=
 	let g:solarized_visibility="low"
-else
-	if $TERM == 'cygwin'
-	else
-		set t_Co=256
-	endif
 endif
 
 if has("gui_running") && &guifont == ""
