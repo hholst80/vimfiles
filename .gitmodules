@@ -49,3 +49,6 @@
 [submodule "bundle/vim-sensible"]
 	path = bundle/vim-sensible
 	url = https://github.com/tpope/vim-sensible.git
+[submodule "bundle/vim-unimpaired"]
+	path = bundle/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired
