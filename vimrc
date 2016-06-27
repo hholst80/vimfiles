@@ -36,7 +36,6 @@ set showmatch                           " Show matching parenthesis.
 set title                               " Change terminal title.
 set ttyfast                             " Speed up Vim session. [Alex Pounds]
 set updatetime=500
-set cryptmethod=blowfish2               " Requires Vim 7.4.399 or later.
 set nojoinspaces                        " gq should not keep double spaces
 set nowrap
 set linebreak
@@ -54,6 +53,10 @@ else
 endif
 
 let g:html_dynamic_folds=1              " Save entire diff (folded) in html.
+
+"if v:version >= 704 && has('patch399')
+"	set cryptmethod=blowfish2       " Requires Vim 7.4.399 or later.
+"endif
 
 " =============================================================================
 " Load pathogen and insert all bundles.
