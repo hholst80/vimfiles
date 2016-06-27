@@ -88,6 +88,8 @@ if has("gui_running") && &guifont == ""
 	colorscheme github
 	if has("win32")
 		set guifont=Consolas:h10:cANSI
+	elseif $USER == "hholst"
+		set guifont=Ubuntu\ Mono\ 16
 	else
 		set guifont=Ubuntu\ Mono\ 12
 	endif
