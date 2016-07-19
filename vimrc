@@ -39,6 +39,7 @@ set updatetime=500
 set nojoinspaces                        " gq should not keep double spaces
 set nowrap
 set linebreak
+set modeline
 
 if &diff                                " Disable readonly for vimdiff.
 	setlocal noro
