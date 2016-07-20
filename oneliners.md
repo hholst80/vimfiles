@@ -33,3 +33,9 @@ Do you still want to proceed with this legacy installer? [yes] no
 
     # type this in terminal
     $ tmux source-file ~/.tmux.conf
+
+# Reverse ssh
+
+Setup a listening on port 1234 on `remote-machine.com` which loops back to the local machine:
+
+    $ ssh -R localhost:1234:localhost:22 holst@remote-machine.com

@@ -55,3 +55,6 @@
 [submodule "bundle/vim-commentary"]
 	path = bundle/vim-commentary
 	url = https://github.com/tpope/vim-commentary
+[submodule "bundle/vim-conda"]
+	path = bundle/vim-conda
+	url = https://github.com/cjrh/vim-conda
