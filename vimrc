@@ -64,6 +64,7 @@ let g:html_dynamic_folds=1              " Save entire diff (folded) in html.
 " =============================================================================
 
 let g:pathogen_disabled = []
+call add(g:pathogen_disabled, 'vim-conda')
 call add(g:pathogen_disabled, 'vim-youcompleteme')
 call add(g:pathogen_disabled, 'vim-neocomplete')
 call add(g:pathogen_disabled, 'vim-bookmarks')
