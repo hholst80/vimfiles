@@ -49,3 +49,6 @@ total:                     %*E
 max memory:                %M MB
 page faults from disk:     %F
 other page faults:         %R'
+
+# Path
+export PATH=/opt/SolarisStudio12.3-linux-x86-bin/solarisstudio12.3/bin:$PATH
