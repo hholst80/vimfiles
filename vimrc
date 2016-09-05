@@ -90,7 +90,7 @@ if has("gui_running")
 endif
 
 if has("gui_running") && &guifont == ""
-	colorscheme github
+	colorscheme parsec
 	if has("win32")
 		set guifont=Consolas:h10:cANSI
 	elseif $USER == "hholst"
@@ -229,7 +229,7 @@ endfunction
 function! ToggleColorSchemeDark()
 	let arr=["lxvc", "wombat256", "xoria256", 
 	\        "vanzan_color", "0x7A69_dark", "xterm16",
-	\        "mustang" ]
+	\        "mustang", "parsec", "penultimate"]
 	if !exists("g:colors_name")
 		let g:colors_name = "default"
 	endif
