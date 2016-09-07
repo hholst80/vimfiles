@@ -59,6 +59,10 @@ let g:html_dynamic_folds=1              " Save entire diff (folded) in html.
 "	set cryptmethod=blowfish2       " Requires Vim 7.4.399 or later.
 "endif
 
+let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_confirm_extra_conf = 1
+
 " =============================================================================
 " Load pathogen and insert all bundles.
 " =============================================================================
@@ -70,10 +74,10 @@ call add(g:pathogen_disabled, 'vim-neocomplete')
 call add(g:pathogen_disabled, 'vim-bookmarks')
 call add(g:pathogen_disabled, 'vim-colorscheme-switcher')
 
-if v:version < '703' || v:version == '703' && !has('patch584') || !has('python')
-	call add(g:pathogen_disabled, 'vim-youcompleteme')
-	call add(g:pathogen_disabled, 'vim-ctab')
-endif
+"if v:version < '703' || v:version == '703' && !has('patch584') || !has('python')
+"	call add(g:pathogen_disabled, 'vim-youcompleteme')
+"	call add(g:pathogen_disabled, 'vim-ctab')
+"endif
 
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
@@ -210,7 +214,7 @@ endfunction
 
 function! ToggleColorSchemeLight()
 	let arr=["solarized", "PaperColor", "github",
-	\        "eclipse"]
+	\        "eclipse", "professional", "google"]
 	if !exists("g:colors_name")
 		let g:colors_name = "default"
 	endif
