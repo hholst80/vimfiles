@@ -107,11 +107,13 @@ if has("gui_running") && &guifont == ""
 		set guifont=Consolas:h10:cANSI
 	elseif $USER == "hholst"
 		colorscheme proton
-		set guifont=mononoki\ 14
+		set guifont=mononoki\ 11
 	else
 		colorscheme parsec
-		set guifont=Ubuntu\ Mono\ 12
+		set guifont=Ubuntu\ Mono\ 11
 	endif
+else
+	colorscheme lxvc
 endif
 
 " =============================================================================
