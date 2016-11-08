@@ -1,6 +1,6 @@
 #!/bin/sh
 VIMHOME=${HOME}/.vim
-for FILE in gitconfig vimrc tmux.conf
+for FILE in gitconfig vimrc tmux.conf redshift.conf Xresources
 do
 	TARGET=${HOME}/.${FILE}
 	if ! test -s ${TARGET}; then
