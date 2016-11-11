@@ -64,3 +64,9 @@
 [submodule "bundle/vim-markdown-preview"]
 	path = bundle/vim-markdown-preview
 	url = https://github.com/JamshedVesuna/vim-markdown-preview
+[submodule "bundle/vim-neomake"]
+	path = bundle/vim-neomake
+	url = https://github.com/neomake/neomake
+[submodule "bundle/vim-python-mode"]
+	path = bundle/vim-python-mode
+	url = https://github.com/klen/python-mode
