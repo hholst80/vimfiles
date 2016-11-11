@@ -59,10 +59,20 @@ let g:html_dynamic_folds=1              " Save entire diff (folded) in html.
 "	set cryptmethod=blowfish2       " Requires Vim 7.4.399 or later.
 "endif
 
+au FileType sh let g:sh_fold_enabled=7
+au FileType sh let g:is_bash=1
+au FileType sh set foldmethod=syntax
+
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_confirm_extra_conf = 1
 let vim_markdown_preview_github=1
+
+let g:pymode_rope = 0
+let g:pymode_syntax = 1
+let g:pymode_lint_write = 1
+let g:pymode_rope_lookup_project = 0
+let g:pymode_rope_complete_on_dot = 0
 
 " =============================================================================
 " Load pathogen and insert all bundles.
@@ -74,6 +84,8 @@ call add(g:pathogen_disabled, 'vim-youcompleteme')
 call add(g:pathogen_disabled, 'vim-neocomplete')
 call add(g:pathogen_disabled, 'vim-bookmarks')
 call add(g:pathogen_disabled, 'vim-colorscheme-switcher')
+call add(g:pathogen_disabled, 'vim-pylint-mode')
+call add(g:pathogen_disabled, 'vim-neomode')
 
 "if v:version < '703' || v:version == '703' && !has('patch584') || !has('python')
 "	call add(g:pathogen_disabled, 'vim-youcompleteme')
@@ -95,14 +107,18 @@ if has("gui_running")
 endif
 
 if has("gui_running") && &guifont == ""
-	colorscheme parsec
 	if has("win32")
+		colorscheme parsec
 		set guifont=Consolas:h10:cANSI
 	elseif $USER == "hholst"
-		set guifont=Ubuntu\ Mono\ 16
+		colorscheme proton
+		set guifont=mononoki\ 11
 	else
-		set guifont=Ubuntu\ Mono\ 12
+		colorscheme parsec
+		set guifont=Ubuntu\ Mono\ 11
 	endif
+else
+	colorscheme lxvc
 endif
 
 " =============================================================================
@@ -118,12 +134,14 @@ nmap <silent> <Leader>p :1,$d _<CR>P
 nmap <silent> <Leader>ve :tabnew $MYVIMRC<CR>
 nmap <silent> <Leader>vs :source $MYVIMRC<CR>
 nmap <Leader>s :GitGutterStageHunk<CR>
+nmap <silent> <Leader>l :PymodeLintToggle<CR>
 nmap Y :.,$y<CR>
 nmap %y :%y<CR>
 nmap %Y :%y<CR>
 nnoremap <Leader>/ /\c
-"nnoremap <Leader>z :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
-nnoremap <silent> <Leader>z :let @/ = '\V\<'.escape(expand('<cword>'), '\').'\>'<CR>
+"nnoremap <Leader>z :if AutoHighlightToggle()<Bar>set invhls<Bar>endif<CR>
+nnoremap <silent> <Leader>z :let @/ = '\V\<'.escape(expand('<cword>'), '\').'\>'<CR>:set hls<CR>
+nnoremap <silent> <Leader>Z :set nohls<CR>
 "nmap <c-f> :call QuietSearch(inputdialog("what? "))<cr>:copen<cr>:set nowrap<cr><c-w>K
 nmap <C-f> :Unite grep:.<CR>
 nmap <C-s> :w<CR>
