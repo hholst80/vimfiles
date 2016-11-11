@@ -66,7 +66,18 @@ au FileType sh set foldmethod=syntax
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_confirm_extra_conf = 1
+
+" ============
+" Vim markdown
+" ============
+
 let vim_markdown_preview_github=1
+let vim_markdown_preview_toggle=2
+let vim_markdown_preview_use_xdg_open=1
+
+" ===============
+" Pymode settings
+" ===============
 
 let g:pymode_rope = 0
 let g:pymode_syntax = 1
