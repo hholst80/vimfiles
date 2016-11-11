@@ -58,3 +58,6 @@
 [submodule "bundle/vim-conda"]
 	path = bundle/vim-conda
 	url = https://github.com/cjrh/vim-conda
+[submodule "bundle/vim-markdown-preview"]
+	path = bundle/vim-markdown-preview
+	url = https://github.com/JamshedVesuna/vim-markdown-preview

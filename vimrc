@@ -62,6 +62,7 @@ let g:html_dynamic_folds=1              " Save entire diff (folded) in html.
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_confirm_extra_conf = 1
+let vim_markdown_preview_github=1
 
 " =============================================================================
 " Load pathogen and insert all bundles.
