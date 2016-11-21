@@ -1,6 +1,6 @@
 #!/bin/sh
 VIMHOME=${HOME}/.vim
-for FILE in gitconfig vimrc tmux.conf redshift.conf Xresources
+for FILE in gitconfig vimrc tmux.conf redshift.conf Xresources bash_aliases toprc
 do
 	TARGET=${HOME}/.${FILE}
 	if ! test -s ${TARGET}; then
