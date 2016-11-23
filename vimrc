@@ -59,9 +59,24 @@ let g:html_dynamic_folds=1              " Save entire diff (folded) in html.
 "	set cryptmethod=blowfish2       " Requires Vim 7.4.399 or later.
 "endif
 
+au FileType sh let g:sh_fold_enabled=7
+au FileType sh let g:is_bash=1
+au FileType sh set foldmethod=syntax
+
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_confirm_extra_conf = 1
+
+" ============
+" Vim markdown
+" ============
+
+let vim_markdown_preview_github=1
+let vim_markdown_preview_use_xdg_open=1
+
+" ===============
+" Pymode settings
+" ===============
 
 let g:pymode_rope = 0
 let g:pymode_syntax = 1
@@ -107,11 +122,13 @@ if has("gui_running") && &guifont == ""
 		set guifont=Consolas:h10:cANSI
 	elseif $USER == "hholst"
 		colorscheme proton
-		set guifont=mononoki\ 14
+		set guifont=mononoki\ 11
 	else
 		colorscheme parsec
-		set guifont=Ubuntu\ Mono\ 12
+		set guifont=Ubuntu\ Mono\ 11
 	endif
+else
+	colorscheme lxvc
 endif
 
 " =============================================================================
