@@ -59,7 +59,7 @@ let g:html_dynamic_folds=1              " Save entire diff (folded) in html.
 "	set cryptmethod=blowfish2       " Requires Vim 7.4.399 or later.
 "endif
 
-au FileType sh let g:sh_fold_enabled=7
+au FileType sh let g:sh_fold_enabled=1
 au FileType sh let g:is_bash=1
 au FileType sh set foldmethod=syntax
 
@@ -73,6 +73,12 @@ let g:ycm_confirm_extra_conf = 1
 
 let vim_markdown_preview_github=1
 let vim_markdown_preview_use_xdg_open=1
+
+" ========
+" Jedi-vim
+" ========
+
+let g:jedi#show_call_signatures = "2"
 
 " ===============
 " Pymode settings
@@ -121,7 +127,8 @@ if has("gui_running") && &guifont == ""
 		colorscheme parsec
 		set guifont=Consolas:h10:cANSI
 	elseif $USER == "hholst"
-		colorscheme proton
+		" colorscheme proton
+		colorscheme professional
 		set guifont=mononoki\ 11
 	else
 		colorscheme parsec
